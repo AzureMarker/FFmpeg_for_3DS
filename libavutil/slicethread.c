@@ -68,7 +68,9 @@ static int run_jobs(AVSliceThread *ctx)
     return current_job == nb_jobs + nb_active_threads - 1;
 }
 
-static void *attribute_align_arg thread_worker(void *v)
+//Removed "static" just for symbol name.
+void *attribute_align_arg thread_worker(void *v);
+void *attribute_align_arg thread_worker(void *v)
 {
     WorkerContext *w = v;
     AVSliceThread *ctx = w->ctx;

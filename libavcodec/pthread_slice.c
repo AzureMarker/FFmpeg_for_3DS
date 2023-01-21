@@ -67,8 +67,7 @@ static void main_function(void *priv) {
     c->mainfunc(avctx);
 }
 
-void worker_func(void *priv, int jobnr, int threadnr, int nb_jobs, int nb_threads);
-void worker_func(void *priv, int jobnr, int threadnr, int nb_jobs, int nb_threads)
+static void worker_func(void *priv, int jobnr, int threadnr, int nb_jobs, int nb_threads)
 {
     AVCodecContext *avctx = priv;
     SliceThreadContext *c = avctx->internal->thread_ctx;

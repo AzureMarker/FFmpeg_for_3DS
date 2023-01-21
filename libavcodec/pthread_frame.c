@@ -176,6 +176,8 @@ static void thread_set_name(PerThreadContext *p)
  * not provide an update_thread_context method, or if the codec returns
  * before calling it.
  */
+
+//Removed "static" just for symbol name.
 attribute_align_arg void *frame_worker_thread(void *arg);
 attribute_align_arg void *frame_worker_thread(void *arg)
 {
